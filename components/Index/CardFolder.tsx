@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import HeaderCardFolder from './HeaderCardFolder';
-import BodyCardFolder from './BodyCardFolder';
+import Card from './Card';
+import Footer from './Footer';
 
 const CardFolder = () => {
     return (
@@ -10,7 +11,21 @@ const CardFolder = () => {
 
             <HeaderCardFolder />
 
-            <BodyCardFolder />
+            <View style={styles.scrollContainer}>
+                <ScrollView style={styles.scroll}>
+                    <View style={styles.body}>
+                        <Card />
+
+                        <Card />
+
+                        <Card />
+
+                        <Card />
+
+                        <Footer />
+                    </View>
+                </ScrollView>
+            </View>
 
         </View>
 
@@ -25,6 +40,23 @@ const styles = StyleSheet.create({
         backgroundColor: '#2B3141',
         alignItems: 'center',
         justifyContent: 'flex-start',
+      },
+
+      scroll: {
+        width: '100%',
+        height: '100%',
+      },
+
+      scrollContainer: {
+        width: '100%',
+        height: 'auto',
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
+
+      body: {
+        marginTop: 20,
+        gap: 20,
       },
 })
 
