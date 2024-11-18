@@ -13,13 +13,12 @@ const Footer = () => {
 
 const styles = StyleSheet.create({
     footer: {
-        paddingTop: 40,
         backgroundColor: '#2B3141',
         width: '100%',
-        height: 200,
+        height: 100,
         borderTopWidth: 1,
         borderTopColor: '#3B4359',
-        justifyContent: 'flex-start',
+        justifyContent: 'center',
         alignItems: 'center',
     },
 
